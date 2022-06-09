@@ -13,4 +13,5 @@ target 'movies' do
 
   pod 'Alamofire'
 
+  pod 'Swinject'
 end
