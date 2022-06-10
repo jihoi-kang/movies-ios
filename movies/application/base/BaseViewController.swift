@@ -14,6 +14,5 @@ class BaseViewController<VM: BaseViewModel>: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel.start()
     }
 }

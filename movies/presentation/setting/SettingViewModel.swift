@@ -6,7 +6,5 @@
 //
 
 class SettingViewModel: BaseViewModel {
-    override func start() {
-        
-    }
+    
 }

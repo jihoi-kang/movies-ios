@@ -6,7 +6,5 @@
 //
 
 class MovieDetailViewModel: BaseViewModel {
-    override func start() {
-        
-    }
+    
 }

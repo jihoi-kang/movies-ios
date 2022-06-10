@@ -15,6 +15,7 @@ class DiContainer {
     private init() {
         self.setupViewController()
         self.setupViewModel()
+        self.setupNetwork()
     }
 }
 
@@ -46,14 +47,22 @@ extension DiContainer {
 
 extension DiContainer {
     private func setupViewModel() {
-        self.container.register(MovieListViewModel.self) { _ in
-            return MovieListViewModel()
+        self.container.register(MovieListViewModel.self) { r in
+            return MovieListViewModel(apiService: r.resolve(ApiServiceType.self)!)
         }
         self.container.register(SettingViewModel.self) { _ in
             return SettingViewModel()
         }
         self.container.register(MovieDetailViewModel.self) { _ in
             return MovieDetailViewModel()
+        }
+    }
+}
+
+extension DiContainer {
+    private func setupNetwork() {
+        self.container.register(ApiServiceType.self) { _ in
+            return ApiService()
         }
     }
 }
