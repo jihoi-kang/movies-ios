@@ -8,16 +8,10 @@
 import Foundation
 
 extension Bundle {
-    var clientId: String {
+    var tmdbApiKey: String {
         guard let file = self.path(forResource: "KeyInfo", ofType: "plist") else { return "" }
         guard let resource = NSDictionary(contentsOfFile: file) else { return "" }
-        guard let key = resource["X_NAVER_CLIENT_ID"] as? String else { fatalError("Please enter the X_NAVER_CLIENT_ID at KeyInfo.plist") }
-        return key
-    }
-    var clientSecret: String {
-        guard let file = self.path(forResource: "KeyInfo", ofType: "plist") else { return "" }
-        guard let resource = NSDictionary(contentsOfFile: file) else { return "" }
-        guard let key = resource["X_NAVER_CLIENT_SECRET"] as? String else { fatalError("Please enter the X_NAVER_CLIENT_SECRET at KeyInfo.plist") }
+        guard let key = resource["TMDB_API_KEY"] as? String else { fatalError("Please enter the TMDB_API_KEY at KeyInfo.plist") }
         return key
     }
 }

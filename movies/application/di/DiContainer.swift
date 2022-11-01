@@ -6,6 +6,7 @@
 //
 
 import Swinject
+import Moya
 import Then
 
 class DiContainer {
@@ -15,7 +16,9 @@ class DiContainer {
     private init() {
         self.setupViewController()
         self.setupViewModel()
-        self.setupNetwork()
+        self.setupRepository()
+        self.setupDataSource()
+        self.setupUseCase()
     }
 }
 
@@ -28,12 +31,16 @@ extension DiContainer {
             let storyboard = UIStoryboard(name: "MovieList", bundle: nil)
             return (storyboard.instantiateViewController(withIdentifier: "MovieList") as! MovieListViewController).then {
                 $0.viewModel = r.resolve(MovieListViewModel.self)
+                $0.title = "Movie"
+                $0.navigationItem.largeTitleDisplayMode = .always
             }
         }
         self.container.register(SettingViewController.self) { r in
             let storyboard = UIStoryboard(name: "Setting", bundle: nil)
             return (storyboard.instantiateViewController(withIdentifier: "Setting") as! SettingViewController).then {
                 $0.viewModel = r.resolve(SettingViewModel.self)
+                $0.title = "Setting"
+                $0.navigationItem.largeTitleDisplayMode = .always
             }
         }
         self.container.register(MovieDetailViewController.self) { r in
@@ -48,7 +55,7 @@ extension DiContainer {
 extension DiContainer {
     private func setupViewModel() {
         self.container.register(MovieListViewModel.self) { r in
-            return MovieListViewModel(apiService: r.resolve(ApiServiceType.self)!)
+            return MovieListViewModel(getMoviesUseCase: r.resolve(GetMoviesUseCase.self)!)
         }
         self.container.register(SettingViewModel.self) { _ in
             return SettingViewModel()
@@ -60,9 +67,25 @@ extension DiContainer {
 }
 
 extension DiContainer {
-    private func setupNetwork() {
-        self.container.register(ApiServiceType.self) { _ in
-            return ApiService()
+    private func setupRepository() {
+        self.container.register(MovieRepository.self) { r in
+            return MovieRepositoryImpl(remoteDataSource: r.resolve(MovieRemoteDataSource.self)!)
+        }
+    }
+}
+
+extension DiContainer {
+    private func setupDataSource() {
+        self.container.register(MovieRemoteDataSource.self) { _ in
+            return MovieRemoteDataSourceImpl(provider: MoyaProvider<MovieApi>())
+        }
+    }
+}
+
+extension DiContainer {
+    private func setupUseCase() {
+        self.container.register(GetMoviesUseCase.self) { r in
+            return GetMoviesUseCaseImpl(movieRepository: r.resolve(MovieRepository.self)!)
         }
     }
 }

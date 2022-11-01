@@ -11,7 +11,10 @@ target 'movies' do
 
   pod 'Then'
 
-  pod 'Alamofire'
+  pod 'Moya'
+  pod 'Moya/RxSwift'
 
   pod 'Swinject'
+
+  pod 'Kingfisher'
 end
