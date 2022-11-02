@@ -113,71 +113,72 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		E219DA6B2910EE7000416442 /* api */ = {
+		E219DA6B2910EE7000416442 /* API */ = {
 			isa = PBXGroup;
 			children = (
-				E24C8A102853194D00A9BAAE /* response */,
+				E24C8A102853194D00A9BAAE /* Response */,
 				E276F32F2881201C00B0CD36 /* MovieApi.swift */,
 			);
-			path = api;
+			path = API;
 			sourceTree = "<group>";
 		};
-		E219DA712910F0CF00416442 /* domain */ = {
+		E219DA712910F0CF00416442 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
-				E219DA742910F1C400416442 /* model */,
-				E219DA732910F1BB00416442 /* repository */,
-				E219DA722910F19C00416442 /* usecase */,
+				E219DA742910F1C400416442 /* Model */,
+				E219DA732910F1BB00416442 /* Repository */,
+				E219DA722910F19C00416442 /* UseCase */,
 			);
-			path = domain;
+			path = Domain;
 			sourceTree = "<group>";
 		};
-		E219DA722910F19C00416442 /* usecase */ = {
+		E219DA722910F19C00416442 /* UseCase */ = {
 			isa = PBXGroup;
 			children = (
 				E219DA782910F28000416442 /* GetMoviesUseCase.swift */,
 			);
-			path = usecase;
+			path = UseCase;
 			sourceTree = "<group>";
 		};
-		E219DA732910F1BB00416442 /* repository */ = {
+		E219DA732910F1BB00416442 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
 				E276F3332881342800B0CD36 /* MovieRepository.swift */,
 			);
-			path = repository;
+			path = Repository;
 			sourceTree = "<group>";
 		};
-		E219DA742910F1C400416442 /* model */ = {
+		E219DA742910F1C400416442 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				E219DA7C2910FA8600416442 /* MovieEntity.swift */,
 			);
-			path = model;
+			path = Model;
 			sourceTree = "<group>";
 		};
-		E219DA7A2910FA2700416442 /* ui */ = {
+		E219DA7A2910FA2700416442 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				E24C89EF2851D17200A9BAAE /* movie */,
-				E24C89F02851D18300A9BAAE /* setting */,
+				E24C89E62851BEAB00A9BAAE /* Base */,
+				E24C89EF2851D17200A9BAAE /* Movie */,
+				E24C89F02851D18300A9BAAE /* Setting */,
 				E24C89ED2851CB8D00A9BAAE /* MainViewController.swift */,
 			);
-			path = ui;
+			path = UI;
 			sourceTree = "<group>";
 		};
-		E219DA7B2910FA2F00416442 /* model */ = {
+		E219DA7B2910FA2F00416442 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				E24C8A042852D8F800A9BAAE /* UiMovieModel.swift */,
 			);
-			path = model;
+			path = Model;
 			sourceTree = "<group>";
 		};
 		E24C89B92851B91400A9BAAE = {
 			isa = PBXGroup;
 			children = (
-				E24C89C42851B91400A9BAAE /* movies */,
+				E24C89C42851B91400A9BAAE /* Movies */,
 				E24C89C32851B91400A9BAAE /* Products */,
 				7CF1B7D73E231D3611CBA6FE /* Pods */,
 				1D354F1533A5E42E670258C3 /* Frameworks */,
@@ -192,49 +193,48 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		E24C89C42851B91400A9BAAE /* movies */ = {
+		E24C89C42851B91400A9BAAE /* Movies */ = {
 			isa = PBXGroup;
 			children = (
-				E24C89D92851BAC700A9BAAE /* application */,
-				E24C89DB2851BB3800A9BAAE /* data */,
-				E219DA712910F0CF00416442 /* domain */,
-				E24C89DA2851BADA00A9BAAE /* presentation */,
-				E2B4AE132872D8E000A8E5B3 /* ext */,
-				E24C89DC2851BB6C00A9BAAE /* resource */,
+				E24C89D92851BAC700A9BAAE /* Application */,
+				E24C89DB2851BB3800A9BAAE /* Data */,
+				E219DA712910F0CF00416442 /* Domain */,
+				E24C89DA2851BADA00A9BAAE /* Presentation */,
+				E2B4AE132872D8E000A8E5B3 /* Ext */,
+				E24C89DC2851BB6C00A9BAAE /* Resource */,
 			);
-			path = movies;
+			path = Movies;
 			sourceTree = "<group>";
 		};
-		E24C89D92851BAC700A9BAAE /* application */ = {
+		E24C89D92851BAC700A9BAAE /* Application */ = {
 			isa = PBXGroup;
 			children = (
-				E24C89E62851BEAB00A9BAAE /* base */,
-				E24C89E52851BEA300A9BAAE /* di */,
+				E24C89E52851BEA300A9BAAE /* DI */,
 				E24C89C52851B91400A9BAAE /* AppDelegate.swift */,
 				E24C89C72851B91400A9BAAE /* SceneDelegate.swift */,
 			);
-			path = application;
+			path = Application;
 			sourceTree = "<group>";
 		};
-		E24C89DA2851BADA00A9BAAE /* presentation */ = {
+		E24C89DA2851BADA00A9BAAE /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				E219DA7B2910FA2F00416442 /* model */,
-				E219DA7A2910FA2700416442 /* ui */,
+				E219DA7B2910FA2F00416442 /* Model */,
+				E219DA7A2910FA2700416442 /* UI */,
 			);
-			path = presentation;
+			path = Presentation;
 			sourceTree = "<group>";
 		};
-		E24C89DB2851BB3800A9BAAE /* data */ = {
+		E24C89DB2851BB3800A9BAAE /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				E276F331288133FD00B0CD36 /* remote */,
-				E276F3322881340700B0CD36 /* repository */,
+				E276F331288133FD00B0CD36 /* Remote */,
+				E276F3322881340700B0CD36 /* Repository */,
 			);
-			path = data;
+			path = Data;
 			sourceTree = "<group>";
 		};
-		E24C89DC2851BB6C00A9BAAE /* resource */ = {
+		E24C89DC2851BB6C00A9BAAE /* Resource */ = {
 			isa = PBXGroup;
 			children = (
 				E24C89CE2851B91600A9BAAE /* Assets.xcassets */,
@@ -243,109 +243,109 @@
 				E2CE31022860DADF00D34A72 /* KeyInfo.plist */,
 				E24C8A152853251100A9BAAE /* movies++Bundle.swift */,
 			);
-			path = resource;
+			path = Resource;
 			sourceTree = "<group>";
 		};
-		E24C89E52851BEA300A9BAAE /* di */ = {
+		E24C89E52851BEA300A9BAAE /* DI */ = {
 			isa = PBXGroup;
 			children = (
 				E24C89E32851BDEE00A9BAAE /* DiContainer.swift */,
 			);
-			path = di;
+			path = DI;
 			sourceTree = "<group>";
 		};
-		E24C89E62851BEAB00A9BAAE /* base */ = {
+		E24C89E62851BEAB00A9BAAE /* Base */ = {
 			isa = PBXGroup;
 			children = (
 				E24C89E72851BEC900A9BAAE /* BaseViewController.swift */,
 				E24C89E92851BFF800A9BAAE /* BaseViewModel.swift */,
 				E24C8A09285310A600A9BAAE /* BaseViewModelType.swift */,
 			);
-			path = base;
+			path = Base;
 			sourceTree = "<group>";
 		};
-		E24C89EF2851D17200A9BAAE /* movie */ = {
+		E24C89EF2851D17200A9BAAE /* Movie */ = {
 			isa = PBXGroup;
 			children = (
-				E24C89FE2852D7EE00A9BAAE /* list */,
-				E24C89F72851D1EC00A9BAAE /* detail */,
+				E24C89FE2852D7EE00A9BAAE /* List */,
+				E24C89F72851D1EC00A9BAAE /* Detail */,
 			);
-			path = movie;
+			path = Movie;
 			sourceTree = "<group>";
 		};
-		E24C89F02851D18300A9BAAE /* setting */ = {
+		E24C89F02851D18300A9BAAE /* Setting */ = {
 			isa = PBXGroup;
 			children = (
 				E24C89F12851D19800A9BAAE /* SettingViewController.swift */,
 				E24C89F32851D1A200A9BAAE /* SettingViewModel.swift */,
 				E24C89F52851D1C200A9BAAE /* Setting.storyboard */,
 			);
-			path = setting;
+			path = Setting;
 			sourceTree = "<group>";
 		};
-		E24C89F72851D1EC00A9BAAE /* detail */ = {
+		E24C89F72851D1EC00A9BAAE /* Detail */ = {
 			isa = PBXGroup;
 			children = (
 				E24C89F82851D1FA00A9BAAE /* MovieDetailViewController.swift */,
 				E24C89FA2851D20C00A9BAAE /* MovieDetailViewModel.swift */,
 				E24C89FC2851D21400A9BAAE /* MovieDetail.storyboard */,
 			);
-			path = detail;
+			path = Detail;
 			sourceTree = "<group>";
 		};
-		E24C89FE2852D7EE00A9BAAE /* list */ = {
+		E24C89FE2852D7EE00A9BAAE /* List */ = {
 			isa = PBXGroup;
 			children = (
-				E24C89FF2852D7FF00A9BAAE /* cell */,
+				E24C89FF2852D7FF00A9BAAE /* Cell */,
 				E24C89DD2851BBD600A9BAAE /* MovieListViewController.swift */,
 				E24C89EB2851C0DE00A9BAAE /* MovieListViewModel.swift */,
 				E24C89E02851BBF900A9BAAE /* MovieList.storyboard */,
 			);
-			path = list;
+			path = List;
 			sourceTree = "<group>";
 		};
-		E24C89FF2852D7FF00A9BAAE /* cell */ = {
+		E24C89FF2852D7FF00A9BAAE /* Cell */ = {
 			isa = PBXGroup;
 			children = (
 				E24C8A002852D82A00A9BAAE /* MovieTableViewCell.swift */,
 				E24C8A012852D82A00A9BAAE /* MovieTableViewCell.xib */,
 			);
-			path = cell;
+			path = Cell;
 			sourceTree = "<group>";
 		};
-		E24C8A102853194D00A9BAAE /* response */ = {
+		E24C8A102853194D00A9BAAE /* Response */ = {
 			isa = PBXGroup;
 			children = (
 				E24C8A112853196200A9BAAE /* GetMoviesResponse.swift */,
 			);
-			path = response;
+			path = Response;
 			sourceTree = "<group>";
 		};
-		E276F331288133FD00B0CD36 /* remote */ = {
+		E276F331288133FD00B0CD36 /* Remote */ = {
 			isa = PBXGroup;
 			children = (
-				E219DA6B2910EE7000416442 /* api */,
+				E219DA6B2910EE7000416442 /* API */,
 				E219DA6D2910EE8A00416442 /* MovieRemoteDataSource.swift */,
 				E219DA6F2910EE9C00416442 /* MovieRemoteDataSourceImpl.swift */,
 			);
-			path = remote;
+			path = Remote;
 			sourceTree = "<group>";
 		};
-		E276F3322881340700B0CD36 /* repository */ = {
+		E276F3322881340700B0CD36 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
 				E276F3352881343B00B0CD36 /* MovieRepositoryImpl.swift */,
 			);
-			path = repository;
+			path = Repository;
 			sourceTree = "<group>";
 		};
-		E2B4AE132872D8E000A8E5B3 /* ext */ = {
+		E2B4AE132872D8E000A8E5B3 /* Ext */ = {
 			isa = PBXGroup;
 			children = (
 				E2B4AE152872D94A00A8E5B3 /* StringExt.swift */,
 				E23C72C629102207009F3325 /* UITableViewExt.swift */,
 			);
-			path = ext;
+			path = Ext;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
