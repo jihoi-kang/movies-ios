@@ -13,20 +13,29 @@ class MovieDetailViewController: BaseViewController<MovieDetailViewModel> {
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var releaseDateLabel: UILabel!
     @IBOutlet var descriptionLabel: UILabel!
-    
-    var movie: UiMovieModel?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupUi()
+        setupObserve()
     }
     
-    private func setupUi() {
-        titleLabel.text = movie?.title
-        releaseDateLabel.text = movie?.releaseDate
-        descriptionLabel.text = movie?.overview
-        backgroundImage.kf.setImage(with: URL(string: movie?.backgroundUrl ?? ""))
+    private func setupObserve() {
+        assert(viewModel != nil)
+        
+        let input = MovieDetailViewModel.Input()
+        
+        let output = viewModel.transform(input: input)
+        
+        output.movie.asDriver()
+            .drive(onNext: { [weak self] movie in
+                guard let self = self else { return }
+                self.titleLabel.text = movie?.title
+                self.releaseDateLabel.text = movie?.releaseDate
+                self.descriptionLabel.text = movie?.overview
+                self.backgroundImage.kf.setImage(with: URL(string: movie?.backgroundUrl ?? ""))
+            })
+            .disposed(by: disposeBag)
     }
 
 }

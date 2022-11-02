@@ -58,8 +58,7 @@ class MovieListViewController: BaseViewController<MovieListViewModel> {
             .subscribe(onNext: { item in
                 let vc: MovieDetailViewController = (DiContainer.instance.container.resolve(MovieDetailViewController.self)!).then {
                     $0.title = "\(item.title)"
-                    $0.navigationItem.largeTitleDisplayMode = .always
-                    $0.movie = item
+                    $0.viewModel.movie.accept(item)
                 }
                 
                 self.navigationController?.pushViewController(vc, animated: true)

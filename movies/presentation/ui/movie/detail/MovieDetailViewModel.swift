@@ -10,16 +10,19 @@ import RxCocoa
 
 class MovieDetailViewModel: BaseViewModel, BaseViewModelType {
     
+    let movie: BehaviorRelay<UiMovieModel?> = .init(value: nil)
+    
     struct Input {
         
     }
     
     struct Output {
+        let movie: BehaviorRelay<UiMovieModel?>
     }
     
     
     func transform(input: Input) -> Output {
-        return Output()
+        return Output(movie: self.movie)
     }
     
 }

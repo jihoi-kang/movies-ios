@@ -11,8 +11,4 @@ import UIKit
 class BaseViewController<VM: BaseViewModel>: UIViewController {
     let disposeBag = DisposeBag()
     var viewModel: VM!
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
 }

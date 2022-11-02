@@ -32,7 +32,6 @@ extension DiContainer {
             return (storyboard.instantiateViewController(withIdentifier: "MovieList") as! MovieListViewController).then {
                 $0.viewModel = r.resolve(MovieListViewModel.self)
                 $0.title = "Movie"
-                $0.navigationItem.largeTitleDisplayMode = .always
             }
         }
         self.container.register(SettingViewController.self) { r in
@@ -40,7 +39,6 @@ extension DiContainer {
             return (storyboard.instantiateViewController(withIdentifier: "Setting") as! SettingViewController).then {
                 $0.viewModel = r.resolve(SettingViewModel.self)
                 $0.title = "Setting"
-                $0.navigationItem.largeTitleDisplayMode = .always
             }
         }
         self.container.register(MovieDetailViewController.self) { r in
